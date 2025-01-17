@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
+    <!-- The hamburger menu links -->
+    <ul class="menu">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="award.html">Awards</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <script>
+      // JavaScript for toggling menu visibility on button click
+      document
+        .querySelector(".menu-toggle")
+        .addEventListener("click", function () {
+          const menu = document.querySelector(".menu");
+          menu.classList.toggle("show");
+        });
+    </script>
+  </body>
+</html>
