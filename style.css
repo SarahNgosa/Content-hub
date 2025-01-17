@@ -170,10 +170,10 @@ html {
 }
 /* Initially hide the menu */
 .menu {
-  display: none; /* Hidden by default */
+  display: none;
   list-style: none;
   padding: 0;
-  background-color: #333; /* You can style this as needed */
+  background-color: #333;
   position: absolute;
   top: 50px; /* Adjust based on your header height */
   right: 0;
