@@ -6,28 +6,32 @@
     <title> Contact</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/d86676f4be.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <section class="home">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="award.html">Awards</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-            </nav>
-
-            <div class="logo"> Content Hub</div>
-
+        <div class="logo"> <a href="index.html">Content Hub</a></div>
+        <div class="container" id="container">
+            <div class="navigator" id="navigator">
+                <i class="fa-solid fa-xmark close" onclick="hideMenu()"></i>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="award.html">Awards</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+    
+                    </ul>
+                </nav>
+            </div>
             <div class="icons">
-                <li><a href="#"></a> <img src="icons/facebook.png" alt="" height="30px"></li>
-                <li><a href="#"></a><img src="icons/linkedin.png" alt="" height="30px"></li>
+                <li><a href="#"></a> <i class="fa-brands fa-facebook"></i></li>
+                <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
             </div>
         </div>
+        <i class="fa-solid fa-bars menu" onclick="showMenu()" id="menu"></i>
     </section>
 
     <div class="text">
@@ -51,6 +55,36 @@
             <h1> @The Content Hub</h1>
         </div>
      </section>
+
+     <!-- script for header feature  -->
+    <script>
+        window.addEventListener("scroll", function() {
+            const container = document.querySelector('.container');
+            const video = document.querySelector('#background-video');
+            const videoBottom = video.getBoundingClientRect().bottom;
+
+            if (videoBottom > 0) {
+                container.classList.add('transparent');
+                container.classList.remove('black');
+            } else {
+                container.classList.add('black');
+                container.classList.remove('transparent');
+            }
+        });
+    </script>
+    <!-- Scrpt for the menu feature -->
+     <script>
+        function showMenu() {
+            document.getElementById('container').style.display = 'flex';
+            document.getElementById('menu').style.display = 'none';
+        }
+        function hideMenu() {
+            document.getElementById('container').style.display = 'none';
+            document.getElementById('menu').style.display = 'block';
+
+        }
+
+     </script>
 
 </body>
 </html>

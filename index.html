@@ -1,99 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Hub</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="home">
-      <div class="container">
-        <nav>
-          <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-          <ul class="menu">
-            <li><a href="index.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="award.html">Awards</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d86676f4be.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-        <div class="logo">Content Hub</div>
+    <!-- <section class="home">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="award.html">Awards</a></li>
+                    <li><a href="contact.html">Contact</a></li>
 
-        <div class="icons">
-          <li>
-            <a href="#"
-              ><img src="icons/facebook.png" alt="" height="30px"
-            /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="icons/linkedin.png" alt="" height="30px"
-            /></a>
-          </li>
+                </ul>
+            </nav>
+
+            <div class="logo"> Content Hub</div>
+
+            <div class="icons">
+                <li><a href="#"></a> <img src="icons/facebook.png" alt="" height="30px"></li>
+                <li><a href="#"></a><img src="icons/linkedin.png" alt="" height="30px"></li>
+            </div>
         </div>
-      </div>
+    </section> -->
+    <section class="home">
+        <div class="logo"> <a href="index.html">Content Hub</a></div>
+        <div class="container" id="container">
+            <div class="navigator" id="navigator">
+                <i class="fa-solid fa-xmark close" onclick="hideMenu()"></i>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Work</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="award.html">Awards</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+    
+                    </ul>
+                </nav>
+            </div>
+            <div class="icons">
+                <li><a href="#"></a> <i class="fa-brands fa-facebook"></i></li>
+                <li><a href="#"></a><i class="fa-brands fa-linkedin"></i></li>
+            </div>
+        </div>
+        <i class="fa-solid fa-bars menu" onclick="showMenu()" id="menu"></i>
     </section>
 
     <!-- Display -->
-    <section class="display">
-      <video autoplay muted loop id="background-video">
-        <source src="images/PBWN8835.mp4" type="video/mp4" />
-      </video>
-      <div class="display-content">
-        <a href="images/PBWN8835.MP4" target="_blank"
-          ><button class="btn">VIEW</button></a
-        >
-      </div>
+     <section class="display"></section>
+        <video autoplay muted loop id="background-video">
+            <source src="images/PBWN8835.mp4" type="video/mp4">
+        </video>
+        <div class="display-content">
+            <a href="images/PBWN8835.MP4" target="_blank"> <button class="btn"> VIEW</button ></a>
+            
+        </div>
     </section>
 
     <!-- Gallery -->
-    <div class="gallery">
-      <div class="image-container">
-        <img src="images/Image1.jpg" alt="Image 1" />
-      </div>
-      <div class="image-container">
-        <img src="images/Image2.jpg" alt="Image 2" />
-      </div>
-      <div class="image-container">
-        <img src="images/Image3.jpg" alt="Image 3" />
-      </div>
-      <div class="image-container">
-        <img src="images/Image4.jpg" alt="Image 4" />
-      </div>
+     <div class="gallery">
+        <div class="image-container">
+            <img src="images/Image1.jpg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="images/Image2.jpg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="images/Image3.jpg" alt="Image 3">
+        </div>
+        <div class="image-container">
+            <img src="images/Image4.jpg" alt="Image 4">
+        </div>
     </div>
 
     <!-- Footer -->
-    <section class="footer">
-      <div class="content">
-        <h1>@The Content Hub</h1>
-      </div>
-    </section>
-
-    <!-- Script for header feature -->
+     <section class="footer">
+        <div class="content">
+            <h1> @The Content Hub</h1>
+        </div>
+     </section>
+<!-- script for header feature  -->
     <script>
-      window.addEventListener("scroll", function () {
-        const home = document.querySelector(".home");
-        const video = document.querySelector("#background-video");
-        const videoBottom = video.getBoundingClientRect().bottom;
+        window.addEventListener("scroll", function() {
+            const container = document.querySelector('.container');
+            const video = document.querySelector('#background-video');
+            const videoBottom = video.getBoundingClientRect().bottom;
 
-        if (videoBottom > 0) {
-          home.classList.add("transparent");
-          home.classList.remove("black");
-        } else {
-          home.classList.add("black");
-          home.classList.remove("transparent");
-        }
-      });
-
-      // Script for menu toggle
-      document
-        .querySelector(".menu-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".menu").classList.toggle("show");
+            if (videoBottom > 0) {
+                container.classList.add('transparent');
+                container.classList.remove('black');
+            } else {
+                container.classList.add('black');
+                container.classList.remove('transparent');
+            }
         });
     </script>
-  </body>
+<!-- Scrpt for the menu feature -->
+     <script>
+        function showMenu() {
+            document.getElementById('container').style.display = 'flex';
+            document.getElementById('menu').style.display = 'none';
+        }
+        function hideMenu() {
+            document.getElementById('container').style.display = 'none';
+            document.getElementById('menu').style.display = 'block';
+
+        }
+
+     </script>
+</body>
 </html>
