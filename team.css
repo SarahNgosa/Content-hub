@@ -1,0 +1,97 @@
+.team {
+   background-color: black;
+   max-width: 100%;
+   padding: 20px;
+}
+
+.team .team-container {
+   display: flex;
+   flex-wrap: nowrap; /* Prevent wrapping for larger screens */
+   max-width: 100%;
+   margin: 50px auto;
+   padding: 20px;
+   gap: 40px; /* Maintain gap between items */
+   justify-content: center; /* Center items for all screen sizes */
+   background-color: black;
+}
+
+.team-container img {
+   height: auto;
+   object-fit: cover;
+   max-width: 100%; /* Ensure images do not overflow */
+   width: 400px; /* Set consistent image width */
+   filter: grayscale(100%) brightness(50%);
+}
+
+.team-container .text {
+   max-width: 600px; /* Set max width for text container */
+   text-align: left; /* Align text to the left */
+   color: white;
+}
+
+.team-container .text h1 {
+   font-size: 24px;
+   margin-bottom: 5px;
+   color: white;
+}
+
+.team-container .text h2 {
+   font-size: 18px;
+   margin-bottom: 10px;
+   margin-top: 3px;
+   color: white;
+}
+
+.team-container p {
+   font-size: 14px;
+   line-height: 1.6;
+   margin-bottom: 15px;
+   color: white;
+}
+
+/* Footer */
+.footer {
+   padding: 3px 0;
+   background: black;
+}
+
+.footer .content {
+   text-align: center;
+   font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+   .team .team-container {
+       flex-wrap: wrap; /* Allow wrapping for smaller screens */
+       align-items: center; /* Center-align content */
+       gap: 20px; /* Reduce spacing between items */
+   }
+
+   .team-container img {
+       width: 100%; /* Allow the image to adapt to container width */
+       max-width: 300px; /* Limit maximum image size */
+   }
+
+   .team-container .text {
+       max-width: 100%; /* Use full width for the text container */
+       padding: 10px;
+       text-align: center; /* Center-align text on small screens */
+   }
+
+   .team-container .text h1 {
+       font-size: 20px; /* Adjust text size for smaller screens */
+   }
+
+   .team-container .text h2 {
+       font-size: 16px;
+   }
+
+   .team-container p {
+       font-size: 14px;
+   }
+
+   .footer .content {
+       font-size: 16px; /* Adjust footer text size */
+   }
+}

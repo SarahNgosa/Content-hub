@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    color: white;
+    height: 100%;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+.home .container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+/* Center the logo */
+.home .logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Navigation menu */
+.home .container nav {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.home .container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation links */
+.home .container nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+/* Icons in the top right */
+.home .icons {
+    margin-right: 20px; 
+    color: white;
+    font-size: 18px;
+    display: flex;
+    gap: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    .home .container nav ul {
+        display: none; /* Hide the navigation menu on small screens */
+    }
+
+    .home .icons {
+        font-size: 16px;
+        gap: 5px;
+    }
+
+    .home .logo {
+        font-size: 20px; /* Adjust the logo size */
+    }
+}
